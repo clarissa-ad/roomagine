@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Ekenäset Armchair",
+    "origin": "Sweden",
+    "price": 149.99,
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  },
+  {
+    "name": "Kyoto Low Table",
+    "origin": "Japan",
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  },
+  {
+    "name": "Barcelona Chair",
+    "origin": "Spain",
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  },
+  {
+    "name": "Chesterfield Sofa",
+    "origin": "United Kingdom",
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  },
+  {
+    "name": "Ming Dynasty Cabinet",
+    "origin": "China",
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  },
+  {
+    "name": "Adirondack Chair",
+    "origin": "USA",
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  },
+  {
+    "name": "Louis XVI Console Table",
+    "origin": "France",
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  },
+  {
+    "name": "Rio Rocking Chair",
+    "origin": "Brazil",
+    "photo": "src/assets/sample-chair.png",
+    "link": "https://www.ikea.co.id/in/produk/dekorasi/tanaman-tiruan/fejka-art-80433943"
+  }
+]

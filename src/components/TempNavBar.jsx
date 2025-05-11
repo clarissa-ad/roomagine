@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react';
-import './nav.css';
+import './comp.css';
 
 export const TempNavBar = () => {
   return (

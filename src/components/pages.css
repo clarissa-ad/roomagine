@@ -1,0 +1,14 @@
+.product-card-container {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 16px; /* Space between grid items */
+    justify-content: center; /* Center the grid */
+}
+
+@media (max-width: 768px) {
+    .product-card-container {
+        grid-template-columns: 1fr; /* Stack items in a single column for smaller screens */
+        gap: 16px;
+        text-align: center;
+    }
+}
