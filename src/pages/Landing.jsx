@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom"
+import TempNavBar from "../components/TempNavBar";
+import HeroSection from "../components/HeroSection";
+import CategoriesSection from "../components/CategoriesSection";
+import ProductList from "../components/ProductList";
+import Testimonials from "../components/Testimonials";
+import RecentlyAdded from "../components/RecentlyAdded";
 
 export const Landing = () => {
   return (
     <>
-        <h1>Landing page will be here</h1>
-        <Link to="/InputDisplay">
-            <button>Generate your Image!</button>
-        </Link>
+      <TempNavBar />
+      <HeroSection />
+      <CategoriesSection />
+      <ProductList />
+      <Testimonials />
+      <RecentlyAdded />
     </>
-  )
-}
+  );
+};

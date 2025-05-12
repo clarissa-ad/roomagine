@@ -2,17 +2,16 @@ import { Link } from "react-router-dom";
 import React from 'react';
 
 
-export const TempNavBar = () => {
+export default function TempNavBar() {
   return (
-    <>
-      <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-5 bg-white shadow-md z-50">
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-        <Link to="/InputDisplay">
-          <button>Generate!</button>
-        </Link>
-      </nav>
-    </>
-  )
+    <nav className="flex justify-between items-center p-4 bg-white shadow-md">
+      <div className="text-xl font-bold">Roomagine</div>
+      <div className="flex gap-6">
+        <a href="#" className="hover:text-blue-500">Home</a>
+        <a href="#" className="hover:text-blue-500">Products</a>
+        <a href="#" className="hover:text-blue-500">About</a>
+        <a href="#" className="hover:text-blue-500">Contact</a>
+      </div>
+    </nav>
+  );
 }
