@@ -7,16 +7,31 @@ import '../components/comp.css';
 
 export function OutputDisplay() {
 
-  const { textInputs, uploadedImage, processedImage } = useSelector((state) => state.input);
+  const { uploadedImage, processedImage } = useSelector((state) => state.input);
+  const imageToDownload = processedImage || uploadedImage;
 
   return (
     <>
       <h1>Image Generation Result</h1>
       <div className="output-container">
         {processedImage ? (
-          <img src={processedImage} alt="Processed Room" className="imageResult" />
+          <img src={processedImage} alt="Processed Room" className="image-frame" />
         ) : (
-          uploadedImage && <img src={uploadedImage} alt="Uploaded Room" className="imageResult" />
+          uploadedImage && <img src={uploadedImage} alt="Uploaded Room" className="image-frame" />
+        )}
+        {imageToDownload && (
+          <button
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = imageToDownload;
+              link.download = 'room-image.jpg';
+              link.click();
+            }}
+            className="input-output-button"
+          >
+            <img src="src\assets\icons\download-icon.svg" alt="Download Image" />
+            Download Image
+          </button>
         )}
       </div>
       <h1>Recommended Items</h1>
