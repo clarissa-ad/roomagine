@@ -1,20 +1,43 @@
-/* Temp Navigation */
-.navbar {
-    top: 0;
-    left: 25%;
-    width: 50%;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+/* General Styles */
+:root {
+    --primary-color: #272343;
+    --secondary-color: #f0f0f0;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 18px;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.imageResult{
+    width: 100%;
 }
 
 /* Product Card */
+
 .product-card {
+    background-color: var(--Gray-Scales-White, #ffffff);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.product-card-content{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .product-card-desc {
@@ -30,12 +53,15 @@
 
 .card-desc {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
+    line-height: 1; /* Match the font size */
+    height: auto; /* Ensure the height adjusts dynamically */
+    gap: 8px; 
 }
 
-.card-desc p {
-    margin-top: 0; 
+.card-desc p{
+    font-size: 16px; 
     font-weight: 300;
 }
 
@@ -44,7 +70,6 @@
     font-size: 16px;
     font-style: bold;
     font-weight: 700;
-    line-height: 130%; /* 20.8px */
     text-transform: capitalize;
     flex-direction: column;
     margin-bottom: 0px; 
@@ -59,8 +84,7 @@
     }
 
     .product-card img {
-        width: 100%; /* Full width for images */
-        max-width: 300px;
+        width: 100%;
     }
 
     .product-card-content {
@@ -68,8 +92,10 @@
     }
 
     .card-desc {
-        flex-direction: column; /* Stack origin and text vertically */
-        gap: 4px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        margin-top: 0;
     }
 }
 
