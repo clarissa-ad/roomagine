@@ -11,8 +11,26 @@
     --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --card-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+/* Input Page */
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: red;
+}
 
+.image-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 31.746px;
+    border: 3.81px dashed #000;
+}
 
+/* Output Page */
 .imageResult{
     width: 100%;
 }
@@ -77,6 +95,14 @@
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: red;
+    }
+
     .product-card {
         flex-direction: column; /* Stack content vertically */
         align-items: center;

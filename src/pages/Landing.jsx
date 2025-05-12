@@ -4,7 +4,7 @@ export const Landing = () => {
   return (
     <>
         <h1>Landing page will be here</h1>
-        <Link to="/OutputDisplay">
+        <Link to="/InputDisplay">
             <button>Generate your Image!</button>
         </Link>
     </>
