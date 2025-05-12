@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Testimonials() {
+export function Testimonials() {
   const feedbacks = [
     { id: 1, text: "Amazing quality!", author: "John Doe" },
     { id: 2, text: "Stylish and affordable.", author: "Jane Smith" },

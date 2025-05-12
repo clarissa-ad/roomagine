@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function RecentlyAdded() {
+export function RecentlyAdded() {
   const recentProducts = [
     { id: 1, title: "Pink Chair", price: "$99", img: "/assets/pink-chair.jpg" },
     { id: 2, title: "Orange Chair", price: "$129", img: "/assets/orange-chair.jpg" },

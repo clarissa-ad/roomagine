@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
     <section className="bg-gray-50 py-16 text-center">
       <h1 className="text-4xl font-bold mb-4">Best Furniture Collection For Your Interior</h1>

@@ -1,5 +1,5 @@
 import React from "react";
-export default function CategoriesSection() {
+export function CategoriesSection() {
   const categories = ["Chairs", "Tables", "Sofas", "Decor"];
 
   return (

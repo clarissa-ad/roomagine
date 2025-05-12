@@ -6,7 +6,7 @@ const products = [
   { id: 3, title: "White Stool", price: "$59", img: "/assets/white-stool.jpg" },
 ];
 
-export default function ProductList() {
+export function ProductList() {
   return (
     <section className="py-10 px-6">
       <h2 className="text-2xl font-semibold mb-6">Our Products</h2>
