@@ -5,7 +5,7 @@ import ProductList from "../components/ProductList";
 import Testimonials from "../components/Testimonials";
 import RecentlyAdded from "../components/RecentlyAdded";
 
-export function Landing(){
+export const Landing = () => {
   return (
     <>
       <TempNavBar />
