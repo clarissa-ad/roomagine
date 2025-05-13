@@ -1,20 +1,12 @@
 import { Link } from "react-router-dom"
 import { TempNavBar } from "../components/TempNavBar";
-import { HeroSection } from "../components/HeroSection";
-import { CategoriesSection } from "../components/CategoriesSection";
-import { ProductList } from "../components/ProductList";
-import { Testimonials } from "../components/Testimonials";
-import { RecentlyAdded } from "../components/RecentlyAdded";
+import { HeroSectionOne } from "../components/ui/hero-sections";
 
 export const Landing = () => {
   return (
     <>
-      <TempNavBar />
-      <HeroSection />
-      <CategoriesSection />
-      <ProductList />
-      <Testimonials />
-      <RecentlyAdded />
+      {/* <TempNavBar /> */}
+      <HeroSectionOne />
     </>
   );
 };
