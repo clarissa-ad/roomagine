@@ -64,10 +64,10 @@ export function InputDisplay() {
     };
 
     return (
-        <div className="h-screen w-screen flex flex-col items-center justify-center text-center bg-gray-50 dark:bg-neutral-900" style={{height : "2700px"}}>
+        <div className="h-screen w-screen flex flex-col text-center bg-gray-50 dark:bg-neutral-900" style={{height : "2000px"}}>
             <h1 className="text-3xl font-bold text-center mb-8 text-indigo-700 mt-20">Room Design Generator</h1>
             
-            <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-8 mx-auto" style={{width : "90%"}}>
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Image Upload Section */}
                     <div className="space-y-4">
@@ -189,55 +189,62 @@ export function InputDisplay() {
             </div>
 
             {designedBase64 && (
-                <div className="" style={{width : "40%"}}>
-                    <h2 className="text-2xl font-bold mb-4 text-indigo-700 pt-20 ">Your Designed Room</h2>
+                <div className="flex justify-center">
+                    <div className="flex flex-col items-center" style={{ width: "40%" }}>
+                    <h2 className="text-2xl font-bold mb-4 text-indigo-700 pt-20">
+                        Your Designed Room
+                    </h2>
                     <div className="flex justify-center">
                         <img
-                            src={base64ImageUrl}
-                            alt="AI Room Design Result"
-                            className="rounded-lg shadow-md max-w-full h-auto"
+                        src={base64ImageUrl}
+                        alt="AI Room Design Result"
+                        className="rounded-lg shadow-md max-w-full h-auto"
                         />
+                    </div>
                     </div>
                 </div>
             )}
 
-            <div className="pt-10"> 
-                {Array.isArray(allInteriors) && allInteriors.length > 0 && (
-                    <div className="bg-white rounded-xl shadow-lg py-10" style={{width : "90%"}}>
-                        <h2 className="text-2xl font-bold mb-6 text-gray-800">Recommended Products</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {allInteriors.map((item, index) => (
-                                <div key={index} className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                                    <div className="h-48 overflow-hidden">
-                                        <img
-                                            src={item.links}
-                                            alt={item.titles}
-                                            className="w-full h-full object-cover"
-                                            onError={(e) => {
-                                                e.target.onerror = null;
-                                                e.target.src = "https://via.placeholder.com/300x200?text=Image+Not+Available";
-                                            }}
-                                        />
+
+            <div className="pt-10 flex justify-center"> 
+                <div className=''>
+                    {Array.isArray(allInteriors) && allInteriors.length > 0 && (
+                        <div className="bg-white rounded-xl shadow-lg py-10">
+                            <h2 className="text-2xl font-bold mb-6 text-gray-800">Recommended Products</h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {allInteriors.map((item, index) => (
+                                    <div key={index} className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                                        <div className="h-48 overflow-hidden">
+                                            <img
+                                                src={item.links}
+                                                alt={item.titles}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    e.target.onerror = null;
+                                                    e.target.src = "https://via.placeholder.com/300x200?text=Image+Not+Available";
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="font-semibold text-lg mb-2 line-clamp-2">{item.titles}</h3>
+                                            <p className="text-gray-600 mb-3">
+                                                <span className="font-medium">Price:</span> {item.prices ? `${item.prices}` : 'Not available'}
+                                            </p>
+                                            <a
+                                                href={item.product_link}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="inline-block w-full text-center px-4 py-2 bg-indigo-100 text-indigo-700 rounded-md hover:bg-indigo-200 transition-colors"
+                                            >
+                                                View Product
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div className="p-4">
-                                        <h3 className="font-semibold text-lg mb-2 line-clamp-2">{item.titles}</h3>
-                                        <p className="text-gray-600 mb-3">
-                                            <span className="font-medium">Price:</span> {item.prices ? `${item.prices}` : 'Not available'}
-                                        </p>
-                                        <a
-                                            href={item.product_link}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="inline-block w-full text-center px-4 py-2 bg-indigo-100 text-indigo-700 rounded-md hover:bg-indigo-200 transition-colors"
-                                        >
-                                            View Product
-                                        </a>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
         </div>
     );
