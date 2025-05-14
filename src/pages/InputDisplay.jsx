@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../components/pages.css';
 import '../components/comp.css';
 import axios from "axios";
+import GenAI from "../assets/gen_ai.png"
+import UploadIcon from "../assets/upload.png"
 
 export function InputDisplay() {
     const [vibe, setVibe] = useState("");
@@ -85,7 +87,7 @@ export function InputDisplay() {
                             ) : (
                                 <div className="flex flex-col items-center justify-center p-8">
                                     <img 
-                                        src="/src/assets/icons/image-upload.svg" 
+                                        src={UploadIcon}
                                         alt="Upload Icon" 
                                         className="w-20 h-20 mb-4 opacity-70"
                                     />
@@ -180,7 +182,7 @@ export function InputDisplay() {
                             </>
                         ) : (
                             <>
-                                <img src="src/assets/icons/ai-gen-icon.svg" alt="AI Icon" className="w-5 h-5 mr-2" />
+                                <img src={GenAI} alt="AI Icon" className="w-5 h-5 mr-2" />
                                 Generate Your Design
                             </>
                         )}
