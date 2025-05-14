@@ -159,7 +159,7 @@ export function InputDisplay() {
                                 type="text"
                                 value={country}
                                 onChange={(e) => setCountry(e.target.value)}
-                                placeholder="id, us, sg, jp, etc"
+                                placeholder="id, us, etc"
                                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
                             />
                         </div>
