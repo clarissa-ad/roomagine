@@ -42,7 +42,7 @@ export function InputDisplay() {
 
         try {
             const response = await axios.post(
-                "https://nominally-picked-grubworm.ngrok-free.app/webhook-test/post-image",
+                "https://primary-production-78161.up.railway.app/webhook-test/post-image",
                 formData,
                 {
                     headers: {
